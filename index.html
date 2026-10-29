@@ -29,7 +29,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #050505;
+            background-color: #F4FAFF;
             margin: 0;
             overflow: hidden; /* Hide scrollbars for the animated background */
         }
@@ -47,7 +47,7 @@
         .orb-1 {
             width: 450px;
             height: 450px;
-            background: #D4AF37; /* Telegram Blue */
+            background: #38BDF8; /* Telegram Blue */
             top: -100px;
             left: -150px;
         }
@@ -55,7 +55,7 @@
         .orb-2 {
             width: 500px;
             height: 500px;
-            background: #8B1E2D; /* Deeper Blue */
+            background: #2563EB; /* Deeper Blue */
             bottom: -200px;
             right: -100px;
             animation-delay: -6s;
@@ -68,11 +68,11 @@
 
         /* Glassmorphism Card */
         .glass-card {
-            background: linear-gradient(145deg, rgba(30, 24, 14, 0.72), rgba(10, 10, 10, 0.94));
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(239, 248, 255, 0.98));
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.22);
-            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.32);
+            box-shadow: 0 20px 40px 0 rgba(37, 99, 235, 0.12);
             z-index: 10;
         }
 
@@ -81,7 +81,7 @@
             position: absolute;
             inset: -4px;
             border-radius: 50%;
-            background: conic-gradient(from 0deg, transparent 0%, transparent 38%, #D4AF37 72%, #8B1E2D 100%);
+            background: conic-gradient(from 0deg, transparent 0%, transparent 38%, #38BDF8 72%, #2563EB 100%);
             animation: rotate 2.5s linear infinite;
             z-index: 1;
         }
@@ -90,7 +90,7 @@
             content: '';
             position: absolute;
             inset: 3px; /* Inner cut */
-            background: #101010; /* Match logo background */
+            background: #FFFFFF; /* Match logo background */
             border-radius: 50%;
         }
 
@@ -100,9 +100,9 @@
 
         /* Pulse animation for the main CTA button */
         @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
-            70% { box-shadow: 0 0 0 25px rgba(212, 175, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.45); }
+            70% { box-shadow: 0 0 0 25px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
         }
         
         .btn-pulse {
@@ -111,12 +111,12 @@
         
         /* Subtle text shadow for main heading */
         .glow-text {
-            text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4);
+            text-shadow: 0 2px 20px rgba(37, 99, 235, 0.18);
         }
         
         .neon-text {
-            color: #D4AF37;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4);
+            color: #38BDF8;
+            text-shadow: 0 0 10px rgba(37, 99, 235, 0.45), 0 0 20px rgba(37, 99, 235, 0.18);
         }
     </style>
 </head>
@@ -131,50 +131,50 @@
         <div class="relative w-32 h-32 mb-6 mt-2 flex items-center justify-center">
             <div class="rotating-ring"></div>
             <!-- Inner Logo container placed above the ring via z-index -->
-            <div class="relative z-10 w-[116px] h-[116px] bg-[#101010] rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(212,175,55,0.3)]">
-                <i class="fa-brands fa-telegram text-[4.5rem] text-[#D4AF37]" style="margin-right: 4px; margin-top: 2px;"></i>
+            <div class="relative z-10 w-[116px] h-[116px] bg-[#FFFFFF] rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(212,175,55,0.3)]">
+                <i class="fa-brands fa-telegram text-[4.5rem] text-[#38BDF8]" style="margin-right: 4px; margin-top: 2px;"></i>
             </div>
         </div>
 
         <!-- Heading -->
-        <h1 class="text-[2rem] font-extrabold text-white mb-2 text-center glow-text tracking-wide leading-tight">
+        <h1 class="text-[2rem] font-extrabold text-slate-900 mb-2 text-center glow-text tracking-wide leading-tight">
             BAAZIGAR
         </h1>
         
         <!-- Active Players -->
-        <p class="text-gray-300 font-medium text-sm mb-6 flex items-center gap-2">
+        <p class="text-slate-600 font-medium text-sm mb-6 flex items-center gap-2">
             <span class="text-lg">🏆</span> 50,000+ Active Players
         </p>
 
         <!-- Features list -->
-        <div class="flex items-center justify-center gap-5 w-full mb-8 text-sm font-semibold text-gray-200 bg-white/5 py-3 px-4 rounded-xl border border-white/10 shadow-inner">
+        <div class="flex items-center justify-center gap-5 w-full mb-8 text-sm font-semibold text-slate-700 bg-sky-50 py-3 px-4 rounded-xl border border-sky-200 shadow-inner">
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-shield-check text-[#D4AF37]"></i>
+                <i class="fa-solid fa-shield-check text-[#38BDF8]"></i>
                 <span>100% Trusted</span>
             </div>
             <div class="w-[1px] h-5 bg-white/20"></div>
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-[#D4AF37]"></i>
+                <i class="fa-solid fa-bolt text-[#38BDF8]"></i>
                 <span>Instant Reply</span>
             </div>
         </div>
 
         <!-- Timer Box -->
-        <div class="w-full bg-black/50 border border-[#D4AF37]/40 rounded-2xl p-4 flex flex-col sm:flex-row justify-center items-center gap-3 mb-8 shadow-inner relative overflow-hidden">
-            <div class="absolute inset-0 bg-[#D4AF37]/10 blur-2xl"></div>
-            <span class="text-gray-300 text-xs font-bold tracking-[0.2em] uppercase relative z-10">Offer Ends In:</span>
+        <div class="w-full bg-sky-50/80 border border-[#38BDF8]/40 rounded-2xl p-4 flex flex-col sm:flex-row justify-center items-center gap-3 mb-8 shadow-inner relative overflow-hidden">
+            <div class="absolute inset-0 bg-[#2563EB]/10 blur-2xl"></div>
+            <span class="text-slate-600 text-xs font-bold tracking-[0.2em] uppercase relative z-10">Offer Ends In:</span>
             <span id="timer" class="neon-text font-extrabold text-2xl tabular-nums tracking-wider relative z-10">10:00</span>
         </div>
 
         <!-- CTA Button -->
         <a href="#" target="_blank" rel="noopener noreferrer" 
-           class="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white font-extrabold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 btn-pulse shadow-[0_0_20px_rgba(212,175,55,0.5)] border border-[#F0D778]/30">
+           class="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-slate-900 font-extrabold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 btn-pulse shadow-[0_0_20px_rgba(212,175,55,0.5)] border border-white/70">
             <i class="fa-brands fa-telegram-plane text-2xl"></i>
             <span class="text-[15px] sm:text-base tracking-wider uppercase">JOIN BAAZIGAR</span>
         </a>
         
         <!-- Secure note -->
-        <p class="text-[10px] text-gray-400 mt-6 uppercase tracking-widest font-medium opacity-60">
+        <p class="text-[10px] text-slate-500 mt-6 uppercase tracking-widest font-medium opacity-60">
             <i class="fa-solid fa-lock mr-1.5 text-[9px]"></i> 100% Secure & Verified
         </p>
 

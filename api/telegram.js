@@ -33,6 +33,9 @@ async function sendMetaSubscribe(attribution, eventTime, eventId) {
   if (!accessToken) {
     throw new Error("META_CAPI_ACCESS_TOKEN is not configured");
   }
+  if (!pixelId) {
+    throw new Error("META_PIXEL_ID is not configured");
+  }
 
   const userData = {};
   if (attribution?.fbp) userData.fbp = attribution.fbp;

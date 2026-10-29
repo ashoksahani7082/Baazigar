@@ -167,9 +167,9 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="#" target="_blank" rel="noopener noreferrer" 
-           class="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-slate-900 font-extrabold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 btn-pulse shadow-[0_0_20px_rgba(212,175,55,0.5)] border border-white/70">
-            <i class="fa-brands fa-telegram-plane text-2xl"></i>
+        <a id="baazigar-join-button" href="#" target="_blank" rel="noopener noreferrer" 
+           class="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 btn-pulse shadow-[0_0_20px_rgba(212,175,55,0.5)] border border-white/70">
+            <i class="fa-brands fa-telegram-plane text-2xl text-white"></i>
             <span class="text-[15px] sm:text-base tracking-wider uppercase">JOIN BAAZIGAR</span>
         </a>
         
@@ -207,7 +207,7 @@
         // Create a unique Telegram join-request link for each click.
         // UTM parameters are stored server-side and matched when Telegram
         // sends the join request webhook.
-        const telegramButton = document.querySelector('a[href^="https://t.me/"]');
+        const telegramButton = document.getElementById('baazigar-join-button');
         const fallbackTelegramLink = null;
 
         telegramButton?.addEventListener('click', async (event) => {

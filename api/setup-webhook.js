@@ -10,7 +10,8 @@ export default async function handler(req, res) {
 
   const baseUrl = process.env.BAAZIGAR_BASE_URL;
   if (!baseUrl) return res.status(500).json({ ok: false, error: "BAAZIGAR_BASE_URL is not configured" });
-  const webhookUrl = `${baseUrl.replace(/\\/$/, "")}/api/telegram`;
+  const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+  const webhookUrl = `${normalizedBaseUrl}/api/telegram`;
 
   try {
     const response = await fetch(

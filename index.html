@@ -1,269 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAAZIGAR - Telegram</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'REPLACE_WITH_BAAZIGAR_PIXEL_ID');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=REPLACE_WITH_BAAZIGAR_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F4FAFF;
-            margin: 0;
-            overflow: hidden; /* Hide scrollbars for the animated background */
-        }
-
-        /* Animated glowing background orbs */
-        .bg-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(140px);
-            opacity: 0.45;
-            z-index: 0;
-            animation: float 12s infinite ease-in-out alternate;
-        }
-        
-        .orb-1 {
-            width: 450px;
-            height: 450px;
-            background: #38BDF8; /* Telegram Blue */
-            top: -100px;
-            left: -150px;
-        }
-
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: #2563EB; /* Deeper Blue */
-            bottom: -200px;
-            right: -100px;
-            animation-delay: -6s;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(60px, 80px) scale(1.15); }
-        }
-
-        /* Glassmorphism Card */
-        .glass-card {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(239, 248, 255, 0.98));
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(56, 189, 248, 0.32);
-            box-shadow: 0 20px 40px 0 rgba(37, 99, 235, 0.12);
-            z-index: 10;
-        }
-
-        /* Rotating glowing ring for the logo */
-        .rotating-ring {
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, transparent 0%, transparent 38%, #38BDF8 72%, #2563EB 100%);
-            animation: rotate 2.5s linear infinite;
-            z-index: 1;
-        }
-        
-        .rotating-ring::after {
-            content: '';
-            position: absolute;
-            inset: 3px; /* Inner cut */
-            background: #FFFFFF; /* Match logo background */
-            border-radius: 50%;
-        }
-
-        @keyframes rotate {
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Pulse animation for the main CTA button */
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.45); }
-            70% { box-shadow: 0 0 0 25px rgba(56, 189, 248, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
-        }
-        
-        .btn-pulse {
-            animation: pulse-shadow 2.5s infinite;
-        }
-        
-        /* Subtle text shadow for main heading */
-        .glow-text {
-            text-shadow: 0 2px 20px rgba(37, 99, 235, 0.18);
-        }
-        
-        .neon-text {
-            color: #38BDF8;
-            text-shadow: 0 0 10px rgba(37, 99, 235, 0.45), 0 0 20px rgba(37, 99, 235, 0.18);
-        }
-
-    </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAAZIGAR | Join Telegram</title>
+<meta name="theme-color" content="#eaf7ff">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+const PIXEL_ID = 'REPLACE_WITH_BAAZIGAR_PIXEL_ID';
+fbq('init', PIXEL_ID);
+fbq('track','PageView');
+</script>
+<style>
+*{box-sizing:border-box} body{font-family:Inter,system-ui,sans-serif;margin:0;min-height:100vh;overflow:hidden;background:linear-gradient(135deg,#f8fdff 0%,#e6f6ff 48%,#d4efff 100%);color:#102b46}
+.scene{position:fixed;inset:0;overflow:hidden;perspective:1000px;pointer-events:none}
+.glow{position:absolute;border-radius:50%;filter:blur(65px);opacity:.72;animation:drift 13s ease-in-out infinite alternate}
+.glow.one{width:360px;height:360px;left:-110px;top:-100px;background:#73d0ff}.glow.two{width:400px;height:400px;right:-120px;bottom:-150px;background:#b5e9ff;animation-delay:-5s}
+.orb{position:absolute;border:1px solid rgba(42,157,219,.3);border-radius:28%;transform-style:preserve-3d;box-shadow:inset 0 0 35px rgba(71,183,235,.12),0 20px 60px rgba(46,143,194,.08);animation:rotate3d 18s linear infinite}
+.orb.a{width:180px;height:180px;left:8%;top:18%;transform:rotateX(60deg) rotateZ(30deg)}.orb.b{width:120px;height:120px;right:10%;top:14%;animation-duration:22s;animation-direction:reverse}.orb.c{width:230px;height:230px;right:13%;bottom:6%;animation-duration:26s}
+@keyframes drift{to{transform:translate3d(60px,45px,0) scale(1.12)}}@keyframes rotate3d{0%{transform:rotateX(0) rotateY(0) rotateZ(0)}100%{transform:rotateX(360deg) rotateY(180deg) rotateZ(360deg)}}
+.card{position:relative;z-index:2;width:min(100%,430px);background:rgba(255,255,255,.76);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.95);box-shadow:0 28px 90px rgba(38,123,170,.18),inset 0 1px 0 #fff}
+.ring{position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,#fff,#50bff2,#1688c7,#d9f5ff,#fff);animation:spin 3s linear infinite;filter:drop-shadow(0 0 14px rgba(44,166,224,.32))}
+.ring:after{content:"";position:absolute;inset:4px;border-radius:50%;background:#fff}@keyframes spin{to{transform:rotate(360deg)}}
+.cta{background:linear-gradient(100deg,#168dcc,#52c4f3);box-shadow:0 12px 28px rgba(24,145,202,.28);transition:transform .2s,box-shadow .2s}.cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(24,145,202,.36)}
+.pulse{animation:pulse 2.2s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(53,174,229,.36)}70%{box-shadow:0 0 0 16px rgba(53,174,229,0)}100%{box-shadow:0 0 0 0 rgba(53,174,229,0)}}
+@media(max-height:720px){body{overflow:auto}.card{padding:1.5rem!important}.scene{position:fixed}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
 </head>
-<body class="min-h-screen flex items-center justify-center relative px-4">
-
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-
-    <main class="w-full max-w-[420px] glass-card rounded-[2rem] p-8 relative flex flex-col items-center">
-        
-        <!-- Animated Logo Section -->
-        <div class="relative w-32 h-32 mb-6 mt-2 flex items-center justify-center">
-            <div class="rotating-ring"></div>
-            <!-- Inner Logo container placed above the ring via z-index -->
-            <div class="relative z-10 w-[116px] h-[116px] bg-[#FFFFFF] rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(212,175,55,0.3)]">
-                <i class="fa-brands fa-telegram text-[4.5rem] text-[#38BDF8]" style="margin-right: 4px; margin-top: 2px;"></i>
-            </div>
-        </div>
-
-        <!-- Heading -->
-        <h1 class="text-[2rem] font-extrabold text-slate-900 mb-2 text-center glow-text tracking-wide leading-tight">
-            BAAZIGAR
-        </h1>
-        
-        <!-- Active Players -->
-        <p class="text-slate-600 font-medium text-sm mb-6 flex items-center gap-2">
-            <span class="text-lg">🏆</span> 50,000+ Active Players
-        </p>
-
-        <!-- Features list -->
-        <div class="flex items-center justify-center gap-5 w-full mb-8 text-sm font-semibold text-slate-700 bg-sky-50 py-3 px-4 rounded-xl border border-sky-200 shadow-inner">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-shield-check text-[#38BDF8]"></i>
-                <span>100% Trusted</span>
-            </div>
-            <div class="w-[1px] h-5 bg-white/20"></div>
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-[#38BDF8]"></i>
-                <span>Instant Reply</span>
-            </div>
-        </div>
-
-        <!-- Timer Box -->
-        <div class="w-full bg-sky-50/80 border border-[#38BDF8]/40 rounded-2xl p-4 flex flex-col sm:flex-row justify-center items-center gap-3 mb-8 shadow-inner relative overflow-hidden">
-            <div class="absolute inset-0 bg-[#2563EB]/10 blur-2xl"></div>
-            <span class="text-slate-600 text-xs font-bold tracking-[0.2em] uppercase relative z-10">Offer Ends In:</span>
-            <span id="timer" class="neon-text font-extrabold text-2xl tabular-nums tracking-wider relative z-10">10:00</span>
-        </div>
-
-        <!-- CTA Button -->
-        <a id="baazigar-join-button" href="#" target="_blank" rel="noopener noreferrer" 
-           class="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 btn-pulse shadow-[0_0_20px_rgba(212,175,55,0.5)] border border-white/70">
-            <i class="fa-brands fa-telegram-plane text-2xl text-white"></i>
-            <span class="text-[15px] sm:text-base tracking-wider uppercase">JOIN BAAZIGAR</span>
-        </a>
-        
-        <!-- Secure note -->
-        <p class="text-[10px] text-slate-500 mt-6 uppercase tracking-widest font-medium opacity-60">
-            <i class="fa-solid fa-lock mr-1.5 text-[9px]"></i> 100% Secure & Verified
-        </p>
-
-    </main>
-
-    <script>
-        // Set timer for exactly 10 minutes (600 seconds)
-        let totalSeconds = 600;
-        const timerDisplay = document.getElementById('timer');
-
-        function updateTimer() {
-            if (totalSeconds <= 0) {
-                timerDisplay.innerText = "00:00";
-                return;
-            }
-
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-
-            const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-            const displaySeconds = seconds < 10 ? '0' + seconds : seconds;
-
-            timerDisplay.innerText = `${displayMinutes}:${displaySeconds}`;
-            totalSeconds--;
-        }
-
-        updateTimer();
-        setInterval(updateTimer, 1000);
-
-        // Create a unique Telegram join-request link for each click.
-        // UTM parameters are stored server-side and matched when Telegram
-        // sends the join request webhook.
-        const telegramButton = document.getElementById('baazigar-join-button');
-        const fallbackTelegramLink = null;
-
-        telegramButton?.addEventListener('click', async (event) => {
-            event.preventDefault();
-
-            const originalText = telegramButton.innerHTML;
-            telegramButton.style.pointerEvents = 'none';
-            telegramButton.innerHTML = '<i class="fa-brands fa-telegram-plane text-2xl"></i><span class="text-[15px] sm:text-base tracking-wider uppercase">Preparing...</span>';
-
-            try {
-                const params = new URLSearchParams(window.location.search);
-                let referrerHost = null;
-
-                try {
-                    if (document.referrer) {
-                        referrerHost = new URL(document.referrer).hostname;
-                    }
-                } catch {}
-
-                const response = await fetch('/api/create-invite', {
-                    method: 'POST',
-                    headers: { 'content-type': 'application/json' },
-                    body: JSON.stringify({
-                        source: params.get('utm_source'),
-                        campaign: params.get('utm_campaign'),
-                        medium: params.get('utm_medium'),
-                        content: params.get('utm_content'),
-                        term: params.get('utm_term'),
-                        landing_referrer: referrerHost,
-                        landing_url: window.location.href,
-                        fbp: document.cookie.match(/(?:^|; )_fbp=([^;]+)/)?.[1] || null,
-                        fbc: document.cookie.match(/(?:^|; )_fbc=([^;]+)/)?.[1] || null,
-                        user_agent: navigator.userAgent
-                    })
-                });
-
-                const data = await response.json();
-
-                if (!response.ok || !data.ok || !data.invite_link) {
-                    throw new Error(data.error || 'Invite creation failed');
-                }
-
-                window.location.href = data.invite_link;
-            } catch (error) {
-                console.error('Attribution link error:', error);
-                // If the tracking endpoint is temporarily unavailable,
-                // keep the original Telegram link working.
-                if (fallbackTelegramLink) {
-                    window.location.href = fallbackTelegramLink;
-                } else {
-                    telegramButton.innerHTML = originalText;
-                    telegramButton.style.pointerEvents = '';
-                }
-            }
-        });
-    </script>
-</body>
-</html>
+<body class="min-h-screen flex items-center justify-center px-4 py-6">
+<div class="scene" aria-hidden="true"><div class="glow one"></div><div class="glow two"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<main class="card rounded-[2rem] p-8 flex flex-col items-center text-center">
+<div class="relative w-28 h-28 mb-5 flex items-center justify-center"><div class="ring"></div><div class="relative z-10 w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-inner"><i class="fa-brands fa-telegram text-[4rem] text-sky-500"></i></div></div>
+<div class="text-xs font-extrabold uppercase tracking-[.28em] text-sky-600 mb-2">WELCOME TO</div>
+<h1 class="text-4xl font-black tracking-tight text-slate-900 mb-2">BAAZIGAR</h1>
+<p class="text-slate-600 text-sm leading-6 mb-6">Join the official Baazigar Telegram channel and stay connected.</p>
+<div class="w-full grid grid-cols-2 gap-3 mb-6">
+<div class="rounded-2xl border border-sky-100 bg-white/80 px-3 py-3"><i class="fa-solid fa-shield-halved text-sky-500 mb-2"></i><div class="text-xs font-bold text-slate-700">Official Channel</div></div>
+<div class="rounded-2xl border border-sky-100 bg-white/80 px-3 py-3"><i class="fa-solid fa-bolt text-sky-500 mb-2"></i><div class="text-xs font-bold text-slate-700">Quick Join Request</div></div>
+</div>
+<div class="w-full rounded-2xl border border-sky-100 bg-sky-50/90 px-4 py-4 mb-6 flex items-center justify-center gap-3"><span class="text-[11px] font-extrabold uppercase tracking-[.16em] text-slate-500">Join window</span><span id="timer" class="text-2xl font-black tracking-widest text-sky-600 tabular-nums">10:00</span></div>
+<button id="joinBtn" class="cta pulse w-full rounded-2xl py-4 px-5 text-white font-extrabold tracking-wide flex items-center justify-center gap-3"><i class="fa-brands fa-telegram text-2xl"></i><span id="btnText">JOIN BAAZIGAR CHANNEL</span></button>
+<p id="status" role="status" class="min-h-5 text-xs text-slate-500 mt-4"></p>
+<div class="text-[10px] uppercase tracking-[.18em] text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> Secure connection</div>
+</main>
+<script>
+let seconds=600;const timer=document.getElementById('timer');function tick(){const m=Math.floor(seconds/60),s=seconds%60;timer.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');if(seconds>0)seconds--;}tick();setInterval(tick,1000);
+const btn=document.getElementById('joinBtn'),btnText=document.getElementById('btnText'),status=document.getElementById('status');
+btn.addEventListener('click',async()=>{if(btn.disabled)return;btn.disabled=true;btnText.textContent='PREPARING LINK…';status.textContent='Creating your secure Telegram join link';try{
+const p=new URLSearchParams(location.search);const readCookie=n=>document.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'))?.[1]||null;
+const r=await fetch('/api/create-invite',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({source:p.get('utm_source'),campaign:p.get('utm_campaign'),medium:p.get('utm_medium'),content:p.get('utm_content'),term:p.get('utm_term'),fbp:readCookie('_fbp'),fbc:readCookie('_fbc'),landing_url:location.href,landing_referrer:document.referrer?new URL(document.referrer).hostname:null,user_agent:navigator.userAgent})});
+const d=await r.json();if(!r.ok||!d.ok||!d.invite_link)throw new Error(d.error||'Unable to create invite link');location.href=d.invite_link;
+}catch(e){console.error(e);status.textContent='Could not create a join link. Please try again in a moment.';btnText.textContent='TRY AGAIN';btn.disabled=false;}});
+</script>
+</body></html>

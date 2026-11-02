@@ -8,8 +8,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ ok: false, error: "TELEGRAM_BOT_TOKEN is not configured" });
   }
 
-  const baseUrl = process.env.BAAZIGAR_BASE_URL;
-  if (!baseUrl) return res.status(500).json({ ok: false, error: "BAAZIGAR_BASE_URL is not configured" });
+  // Use the production URL as a fallback if the Vercel env var is missing.
+  const baseUrl = process.env.BAAZIGAR_BASE_URL || "https://baazigar-mu.vercel.app";
   const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
   const webhookUrl = `${normalizedBaseUrl}/api/telegram`;
 

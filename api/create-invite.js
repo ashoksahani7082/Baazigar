@@ -29,7 +29,6 @@ export default async function handler(req, res) {
 
     const clickId = crypto.randomUUID().replaceAll("-", "");
     const linkName = `baazigar_${clickId.slice(0, 24)}`;
-    console.log("Baazigar invite generation started", { click_id: clickId, source: clean(body.source), campaign: clean(body.campaign) });
 
     const attribution = {
       click_id: clickId,
@@ -101,8 +100,6 @@ export default async function handler(req, res) {
         error: "Could not save attribution mapping"
       });
     }
-
-    console.log("Baazigar invite attribution saved to Redis", { click_id: clickId, link_name: linkName, source: attribution.source, campaign: attribution.campaign, has_fbp: Boolean(attribution.fbp), has_fbc: Boolean(attribution.fbc) });
 
     return res.status(200).json({
       ok: true,
